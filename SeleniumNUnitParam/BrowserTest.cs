@@ -18,7 +18,7 @@ namespace SeleniumNUnitParam
             Driver.Navigate().GoToUrl("http://loaduser1:Vanadium2200@beacon-test/sorce/");
             System.Threading.Thread.Sleep(5000);
             TimeSpan pageloadwait = TimeSpan.FromSeconds(30.00);
-            Driver.Manage().Timeouts().ImplicitWait = pageloadwait;
+            Driver.Manage().Timeouts().ImplicitlyWait(pageloadwait);
             string title = Driver.Title;
             Assert.AreEqual("Homepage", title, "Page Title");
             System.Threading.Thread.Sleep(3000);
